@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Join Quiz Game</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="player-body">
+
+    <div id="join-screen" class="join-container">
+        <h1>🎮 Quiz Game</h1>
+        <p>Enter the game PIN shown on the screen</p>
+        <div class="input-group">
+            <input type="text" id="pin-input" placeholder="Game PIN" maxlength="4" inputmode="numeric"
+                autocomplete="off">
+        </div>
+        <div class="input-group">
+            <input type="text" id="name-input" placeholder="Your Nickname" maxlength="20" autocomplete="off">
+        </div>
+        <button class="btn btn-join" id="btn-join">Join Game</button>
+        <div class="error-msg" id="error-msg"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const pinInput = document.getElementById('pin-input');
+        const nameInput = document.getElementById('name-input');
+        const btnJoin = document.getElementById('btn-join');
+        const errorMsg = document.getElementById('error-msg');
+
+        btnJoin.addEventListener('click', tryJoin);
+        nameInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') tryJoin();
+        });
+        pinInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') nameInput.focus();
+        });
+
+        function tryJoin() {
+            const pin = pinInput.value.trim();
+            const name = nameInput.value.trim();
+
+            if (!pin || pin.length < 4) {
+                errorMsg.textContent = 'Please enter a valid 4-digit PIN';
+                return;
+            }
+            if (!name) {
+                errorMsg.textContent = 'Please enter your nickname';
+                return;
+            }
+
+            errorMsg.textContent = '';
+            btnJoin.disabled = true;
+            btnJoin.textContent = 'Checking...';
+
+            socket.emit('validate-pin', { pin, name }, (response) => {
+                if (response.success) {
+                    window.location.href =
+                        `/player.html?pin=${pin}&name=${encodeURIComponent(name)}`;
+                } else {
+                    errorMsg.textContent = response.message;
+                    btnJoin.disabled = false;
+                    btnJoin.textContent = 'Join Game';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

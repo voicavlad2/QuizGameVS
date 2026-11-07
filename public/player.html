@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="player-body">
+
+    <!-- CONNECTING -->
+    <div id="player-connecting" class="screen active">
+        <div class="waiting-animation">🔄</div>
+        <h2>Connecting...</h2>
+    </div>
+
+    <!-- WAITING IN LOBBY -->
+    <div id="player-lobby" class="screen">
+        <div class="waiting-animation">🎮</div>
+        <h2 id="player-name-display">Player</h2>
+        <p>You're in! Waiting for the host to start...</p>
+    </div>
+
+    <!-- ANSWERING QUESTION -->
+    <div id="player-question" class="screen">
+        <div class="player-question-info">
+            <h3 id="p-question-counter">Question 1/10</h3>
+        </div>
+        <div class="player-timer" id="p-timer">20</div>
+        <div class="player-answers-grid" id="p-answers-grid">
+            <button class="player-answer-btn a0" data-index="0">
+                <span class="shape">▲</span>
+            </button>
+            <button class="player-answer-btn a1" data-index="1">
+                <span class="shape">◆</span>
+            </button>
+            <button class="player-answer-btn a2" data-index="2">
+                <span class="shape">●</span>
+            </button>
+            <button class="player-answer-btn a3" data-index="3">
+                <span class="shape">■</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- WAITING / COUNTDOWN -->
+    <div id="player-waiting" class="screen">
+        <div id="p-waiting-content">
+            <div class="waiting-animation">⏳</div>
+            <h2>Answer submitted!</h2>
+            <p>Waiting for everyone else...</p>
+        </div>
+        <div id="p-countdown-content" class="hidden" style="text-align:center">
+            <p style="font-size:1.3rem; margin-bottom:1rem; color:#b8b8d4;">
+                Revealing answer in...
+            </p>
+            <div class="countdown-number" id="p-countdown-number" style="font-size:8rem;">3</div>
+        </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="player-result" class="screen">
+        <div class="result-icon" id="result-icon">✅</div>
+        <div class="result-text" id="result-text">Correct!</div>
+        <div class="result-points" id="result-points">+1000</div>
+        <div class="result-score" id="result-score">Total: 1000</div>
+        <div class="result-streak" id="result-streak"></div>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="player-gameover" class="screen">
+        <div class="result-icon">🏆</div>
+        <h2>Game Over!</h2>
+        <div class="player-rank-display" id="p-final-rank">#1</div>
+        <div id="p-final-score" style="font-size:1.3rem;"></div>
+        <button class="btn btn-join" style="margin-top:2rem" onclick="window.location.href='/join'">
+            Play Again
+        </button>
+    </div>
+
+    <!-- DISCONNECTED -->
+    <div id="player-disconnected" class="screen">
+        <div class="result-icon">😢</div>
+        <h2>Host ended the game</h2>
+        <button class="btn btn-join" style="margin-top:2rem" onclick="window.location.href='/join'">
+            Join Another Game
+        </button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/player.js"></script>
+</body>
+
+</html>

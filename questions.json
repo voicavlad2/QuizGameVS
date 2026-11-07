@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answers": ["London", "Paris", "Berlin", "Madrid"],
+    "correct": 1,
+    "timeLimit": 40
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answers": ["Venus", "Jupiter", "Mars", "Saturn"],
+    "correct": 2,
+    "timeLimit": 40
+  },
+  {
+    "question": "What is 7 × 8?",
+    "answers": ["54", "56", "58", "62"],
+    "correct": 1,
+    "timeLimit": 40
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "answers": ["Van Gogh", "Picasso", "Da Vinci", "Michelangelo"],
+    "correct": 2,
+    "timeLimit": 40
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answers": ["Atlantic", "Indian", "Arctic", "Pacific"],
+    "correct": 3,
+    "timeLimit": 40
+  },
+  {
+    "question": "In what year did World War II end?",
+    "answers": ["1943", "1944", "1945", "1946"],
+    "correct": 2,
+    "timeLimit": 40
+  },
+  {
+    "question": "What is the chemical symbol for Gold?",
+    "answers": ["Go", "Gd", "Au", "Ag"],
+    "correct": 2,
+    "timeLimit": 40
+  },
+  {
+    "question": "Which language has the most native speakers?",
+    "answers": ["English", "Spanish", "Hindi", "Mandarin Chinese"],
+    "correct": 3,
+    "timeLimit": 40
+  }
+]

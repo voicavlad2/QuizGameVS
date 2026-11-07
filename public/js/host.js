@@ -73,6 +73,17 @@ socket.emit('host-create-game', (res) => {
     console.log('[host.js] game created:', res);
     if (res.success && els.gamePin) {
         els.gamePin.textContent = res.pin;
+
+        // Generate QR Code pointing directly to join page
+        const joinUrl = `${window.location.origin}/join`;
+        document.getElementById('qrcode').innerHTML = ''; // clear if any
+        new QRCode(document.getElementById('qrcode'), {
+            text: joinUrl,
+            width: 160,
+            height: 160,
+            colorDark: "#ffffff",
+            colorLight: "transparent"
+        });
     }
 });
 

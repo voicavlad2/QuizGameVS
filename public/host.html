@@ -17,6 +17,7 @@
             <div class="label">Game PIN</div>
             <div class="pin" id="game-pin">----</div>
         </div>
+        <div id="qrcode" style="margin: 1rem auto; display: flex; justify-content: center;"></div>
         <div class="player-count">
             Waiting for players... (<span id="player-count">0</span> joined)
         </div>
@@ -52,6 +53,7 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/host.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </body>
 
 </html>

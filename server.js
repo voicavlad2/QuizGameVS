@@ -10,7 +10,7 @@ const io = new Server(server, { cors: { origin: '*' } });
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
-  res.redirect('/join');
+  res.redirect('/host');
 });
 app.get('/host', (req, res) => res.sendFile(path.join(__dirname, 'public', 'host.html')));
 app.get('/join', (req, res) => res.sendFile(path.join(__dirname, 'public', 'join.html')));

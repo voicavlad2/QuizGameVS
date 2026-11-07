@@ -1,50 +1,63 @@
 [
   {
-    "question": "What is the capital of France?",
-    "answers": ["London", "Paris", "Berlin", "Madrid"],
+    "question": "Care este numele mic al Ioanei?",
+    "answers": ["Doina", "Daniela", "Delia", "Daria"],
+    "correct": 2,
+    "timeLimit": 40
+  },
+  {
+    "question": "Când este ziua de naștere a Ioanei?",
+    "answers": ["9 noiembrie", "nouă noiembrie", "9 Noiembrie", "9 Noiembrie!"],
+    "correct": 2,
+    "timeLimit": 40
+  },
+  {
+    "question": "Are prietena voastră vreun animăluț de companie?",
+    "answers": ["Nu", "Da", "Da Vinci", "Cred că da"],
     "correct": 1,
     "timeLimit": 40
   },
   {
-    "question": "Which planet is known as the Red Planet?",
-    "answers": ["Venus", "Jupiter", "Mars", "Saturn"],
-    "correct": 2,
-    "timeLimit": 40
-  },
-  {
-    "question": "What is 7 × 8?",
-    "answers": ["54", "56", "58", "62"],
+    "question": "Ce animăluț de companie?",
+    "answers": ["Pisică", "Motan", "Cangur", "Nu are"],
     "correct": 1,
     "timeLimit": 40
   },
   {
-    "question": "Who painted the Mona Lisa?",
-    "answers": ["Van Gogh", "Picasso", "Da Vinci", "Michelangelo"],
-    "correct": 2,
-    "timeLimit": 40
-  },
-  {
-    "question": "What is the largest ocean on Earth?",
-    "answers": ["Atlantic", "Indian", "Arctic", "Pacific"],
+    "question": "Care este numele motănelului?",
+    "answers": ["Băiețelul", "Chișa", "Frank", "Șobo"],
     "correct": 3,
     "timeLimit": 40
   },
   {
-    "question": "In what year did World War II end?",
-    "answers": ["1943", "1944", "1945", "1946"],
+    "question": "Care crede Ioana ca este teoria relativității restrânse?",
+    "answers": ["Timpul este relativ", "masa și energia sunt echivalente", "viteza luminii este constantă", "Ospătarule"],
+    "correct": 1,
+    "timeLimit": 40
+  },
+  {
+    "question": "Ce facultate a urmat prietena voastră?",
+    "answers": ["Facultatea de Îmbunătățiri Funciare", "Facultatea de Pirotehnie", "CSIE", "Facultatea de Silvicultură"],
     "correct": 2,
     "timeLimit": 40
   },
   {
-    "question": "What is the chemical symbol for Gold?",
-    "answers": ["Go", "Gd", "Au", "Ag"],
+    "question": "Care a fost ultima restanță a Ioanei?",
+    "answers": ["Educație fizică și sport", "Istoria și cultura evreiască", "CTS", "1946"],
     "correct": 2,
     "timeLimit": 40
   },
   {
-    "question": "Which language has the most native speakers?",
-    "answers": ["English", "Spanish", "Hindi", "Mandarin Chinese"],
+    "question": "În ce s-a deghizat Ioana de Halloween?",
+    "answers": ["Nițoiu", "NU s-a deghizat", "Uraganul Catrina", "Katherine (TVD)"],
     "correct": 3,
+    "timeLimit": 40
+  },
+  {
+    "question": "De ce a ratat Ioana concertul celor de la Coldplay?",
+    "answers": ["Control ortopedic", "Examen la 'fucking statistica'", "Lene", "Niciuna de mai sus"],
+    "correct": 1,
     "timeLimit": 40
   }
+ 
 ]
